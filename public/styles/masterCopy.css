@@ -1,0 +1,32 @@
+body{
+  background-image: url("./1.jpg");
+  //color: #c47124;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+h1, h2{
+}
+
+.holder{
+  margin: 10% auto;
+}
+.guess-input{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  font-size: 80px;
+  text-align: center;
+}
+.submit-button{
+  width: 80px;
+  height: 40px;
+  background-color: orange;
+  position: relative;
+  right: 40px;
+  top: 30px;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 20%;
+  box-shadow: 3px, 5px, 4px, #AAA;
+}
