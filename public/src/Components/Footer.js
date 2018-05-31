@@ -5,7 +5,7 @@ export class Footer extends React.Component{
     return(
       <div className = "footer">
         <img alt = "Fullstack Logo" src = "public/styles/fa-logo@2x.png" className = "image" />
-        {this.props.message}
+        Made by Graham Johnson
         <img alt = "Grace Hopper Logo" src = "public/styles/grace_hopper_academy.png" className = "image" />
       </div>
     )

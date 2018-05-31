@@ -10,6 +10,9 @@ let urlencodedParser = bodyParser.urlencoded({extended: false});
 app.use(express.static("./"));
 //app.use(bodyParser.urlencoded({extended: false}));
 
+app.get("/", function(req, res){
+  res.sendFile("index.html");
+});
 app.post("/guesses/add", urlencodedParser, (req, res) => {
   //need body parser to accept the form names.
   if (!req.body){res.status(400).send("Could not find guess")}

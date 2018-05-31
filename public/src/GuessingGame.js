@@ -16,6 +16,7 @@ function Game(){
   this.winningNumber = generateWinningNumber();
   this.playersGuess = null;
   this.pastGuesses = [];
+  this.hasEnded = false;
 }
 Game.prototype.difference = function(){
   return Math.abs(this.playersGuess - this.winningNumber);
@@ -31,7 +32,8 @@ Game.prototype.playersGuessSubmission = function(guess){
   return this.checkGuess();
 }
 Game.prototype.checkGuess = function(){
-  if (this.playersGuess === this.winningNumber){
+  if (Number(this.playersGuess) === this.winningNumber){
+    this.hasEnded = true;
     return "You Win!";
   }
   if (this.pastGuesses.includes(this.playersGuess)){
@@ -39,6 +41,7 @@ Game.prototype.checkGuess = function(){
   }
   this.pastGuesses.push(this.playersGuess);
   if (this.pastGuesses.length === 5){
+    this.hasEnded = true;
     return "You Lose.";
   }
   if (this.difference() < 10){
@@ -65,6 +68,5 @@ Game.prototype.provideHint = function(){
   return hintArray;
 }
 module.exports = {
-  Game,
   newGame
 }

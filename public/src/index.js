@@ -2,6 +2,8 @@ import ReactDOM from "react-dom";
 import React from "react";
 // import { createStore } from "redux";
 import { App } from "./Components/App.js"
+
+ReactDOM.render(<App />, document.getElementById("root"));
 //import reducer
 
 // let reducer = (state, action) => {
@@ -30,7 +32,6 @@ import { App } from "./Components/App.js"
 
 
   //server.js needs to access this and be able to pass it the array
-  ReactDOM.render(<App guesses = {["-", "-", "-", "-", "-"]} />, document.getElementById("root"));
 // }
 // render();
 // store.subscribe(render);
